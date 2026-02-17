@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+#opener {
+    background-image: url(images/background1.75.png);
+    width: 100%;
+    height: 120vh;
+    background-size: cover;
+}
+/* lang */
+h2 {
+  color: rgb(31, 16, 0);
+  font-size: 32px;
+}
+h4 {
+  color: rgb(31, 16, 0);
+  font-size: 30px;
+}
+h3 {
+  color: rgb(31, 16, 0);
+  font-size: 20px;
+}
+#about-lang {
+  width: 100%;
+  max-width: 100%;
+}
+.image-container {
+  position: relative;
+  background-image: url('images/color-bk.png');
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  max-width: 500vh;  
+  width: 100%;
+  height: 86vh;
+  padding: 50px;
+  padding-bottom: 8vh;
+}
+.image-overlay {
+  position: absolute;
+  justify-content: center; 
+  top: 27vh;
+  left: 18vh;
+  width: 30%; 
+  height: auto;
+  z-index: 2; 
+  opacity: 0.7;                         
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+.image-overlay:hover {
+  opacity: 1;                          
+  transform: translateY(-10px) scale(1.05);
+}
+@keyframes rock {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+.image-overlay2 {
+  position: absolute;
+  justify-content: center;
+  display: block;
+  margin-top: 8vh;
+  margin-left: 75vh;
+  margin-right: auto;
+  width: 20%; 
+  height: auto;
+  z-index: 2; 
+}
+.shake-image {
+  animation: rock 3s ease-in-out infinite; 
+  transform-origin: center bottom;
+}
+.image-container h2 {
+    font-size: 45px;
+    color: #333;
+    margin-top: 42px;
+    margin-bottom: 10px;
+    margin-left: 60vh;
+    text-align: center;
+}
+.image-container h4 {
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    line-height: 1.2;
+    max-width: 800px; 
+    margin-top: 4vh; 
+    margin-left: 92vh;     
+}
+/* about hirono */
+#about-hirono{
+  position: relative;
+  background-color: #3c3429;
+  overflow: hidden;
+  height: 250vh;
+}
+#about-hirono h1 {
+  color: #e8ddcf;
+  font-size: 170px;
+  text-align: center;
+  margin-top: 52vh;
+  margin-bottom: 0;
+}
+#about-hirono h2 {
+  position: absolute;
+  color: #e8ddcf;
+  font-size: 80px;
+  text-align: center;
+  top: 52vh;
+  left: 98vh;
+}
+.hirono-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0; 
+  margin-top: -70px; 
+}
+.hirono-description {
+  position: relative; 
+  text-align: justify;
+  top: -280px;
+  margin-left: 520px;
+}
+.hirono-description.left {
+  align-self: flex-start;
+  margin-left: 550px;
+  max-width: 700px;
+}
+.hirono-description.right {
+  align-self: flex-end;
+  margin-top: 43px;
+  margin-right: 536px;
+  max-width: 545px;
+}
+.hirono-description p {
+  color: #F5E6D3;
+  font-size: 28px;
+  line-height: 1.2;
+}
+.hirono-description2 {
+  position: relative;
+  color: #F5E6D3;
+  font-size: 28px;
+  text-align: justify; 
+  max-width: 700px;
+  top: -12vh;
+  left: 100vh;
+}
+p.name {
+  position: relative; 
+  text-align: center;
+  color: #F5E6D3;
+  font-size: 30px;
+  margin-left: 95vh;
+  margin-top: -2px;
+}
+.hirono-ghost{
+  position: relative;
+  width: 20%;
+  top: -400px;
+  margin-left: 19vh;
+}
+.hirono-star{
+  position: relative;
+  top: -500px;
+  left: 76vh;
+  width: 25%;
+}
+.hirono-sleeping{
+  position: absolute;
+  width: 20%;
+  top: 136vh;
+  transform: translateX(335%);
+}
+.hirono-white{
+  position: absolute;
+  width: 18%;
+  top: 90vh;
+  transform: translateX(34%);
+  border: 1.5px solid #e8ddcf;
+}
+.hirono-mushroom{
+  position: absolute;
+  width: 24%;
+  top: 131vh;
+  right: 118vh;
+}
+.hirono-bear{
+  position: absolute;
+  width: 18%;
+  top:  76vh;
+  transform: translateX(420%);
+  border: 1.5px solid #e8ddcf;
+}
+.hirono-box{
+  width: 20%;
+  position: absolute;
+  width: 24%;
+  top: 130vh;
+  right: 146vh;
+}
+.hirono-stitch{
+  width: 17%;
+  position: absolute;
+  width: 21%;
+  top: 192vh;
+  right: 80vh;
+}
+.kite-hirono{
+  position: absolute;
+  width: 21%;
+  top: 192vh;
+  right: 50vh;
+}
+.all-figures{
+  position: absolute;
+  width: 25%;
+  top: 199vh;
+  right: 123vh;
+  border: 1.5px solid #e8ddcf;
+}
+.shake-image2:hover {
+  transform: rotate(-8deg);
+  animation: rock 1s ease-in-out linear infinite;
+}
+.shake-image3:hover {
+  transform: rotate(8deg);
+  animation: rock 1s ease-in-out linear infinite;
+}
+/* hirono series */
+#hirono-series h1 {
+  position: relative;
+  color: #3c3429;
+  font-size: 150px;
+  text-align: center;
+  top: -4.5vh;
+}
+#hirono-series{
+  position: relative;
+  background-color: #e8ddcf;
+  height: 130vh;
+  padding-top: 10vh;
+  padding-left: 8vh;
+  padding-right: 8vh;
+  bottom: 0;
+}
+.hirono-other{
+  position: absolute;
+  width: 20%;
+  top: 35vh;
+  left: 17vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-other:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-mishief{
+  position: absolute;
+  width: 20%;
+  top: 35vh;
+  left: 62vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-mishief:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-city{
+  position: absolute;
+  width: 20%;
+  top: 35vh;
+  left: 107vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-city:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-mime{
+  position: absolute;
+  width: 20%;
+  top: 35vh;
+  left: 152vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-mime:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-reshape{
+  position: absolute;
+  width: 20%;
+  top: 80vh;
+  left: 17vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-reshape:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-shelter{
+  position: absolute;
+  width: 20%;
+  top: 80vh;
+  left: 62vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-shelter:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-petit{
+  position: absolute;
+  width: 20%;
+  top: 80vh;
+  left: 107vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-petit:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.hirono-echo{
+  position: absolute;
+  width: 20%;
+  top: 80vh;
+  left: 152vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.hirono-echo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+}
+/* end */
+#ending {
+  position: relative;
+  background-color: #3c3429;
+  height: 70vh;
+  top: 0;
+}
+.hirono-birdy{
+  position: absolute;
+  width: 18%;
+  top: 6vh;
+  left: 87vh;
+}
+#ending h2{
+  position: relative;
+  color: #e8ddcf;
+  font-size: 32px;
+  text-align: center;
+  max-width: 115vh;
+  margin-left: 48vh;
+  margin-bottom: 2vh;
+  top: 40vh;
+}
+h2.gaegu-regular a {
+  color: #e8ddcf;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 100px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+h2.gaegu-regular a:hover {
+  color: #f4be77;
+}
+/* google font css */
+.moirai-one-regular {
+  font-family: "Moirai One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.gaegu-light {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.gaegu-regular {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gaegu-bold {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
