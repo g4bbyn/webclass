@@ -45,7 +45,7 @@ h3 {
   position: absolute;
   justify-content: center; 
   top: 27vh;
-  left: 18vh;
+  left: 15vh;
   width: 30%; 
   height: auto;
   z-index: 2; 
@@ -67,7 +67,7 @@ h3 {
   justify-content: center;
   display: block;
   margin-top: 8vh;
-  margin-left: 75vh;
+  margin-left: 72vh;
   margin-right: auto;
   width: 20%; 
   height: auto;
@@ -80,42 +80,49 @@ h3 {
 .image-container h2 {
     font-size: 45px;
     color: #333;
-    margin-top: 42px;
+    margin-top: 33px;
     margin-bottom: 10px;
-    margin-left: 60vh;
+    margin-left: 64vh;
     text-align: center;
 }
 .image-container h4 {
-    font-size: 28px;
+    font-size: 23px;
     justify-content: center;
     align-items: center;
     color: #555;
     line-height: 1.2;
-    max-width: 800px; 
+    max-width: 695px; 
     margin-top: 4vh; 
-    margin-left: 92vh;     
+    margin-left: 90vh;     
 }
 /* about hirono */
 #about-hirono{
   position: relative;
   background-color: #3c3429;
   overflow: hidden;
-  height: 250vh;
+  height: 246vh;
 }
 #about-hirono h1 {
   color: #e8ddcf;
-  font-size: 170px;
+  font-size: 165px;
   text-align: center;
-  margin-top: 52vh;
+  margin-top: 50vh;
   margin-bottom: 0;
+  margin-left: 5vh;
 }
 #about-hirono h2 {
   position: absolute;
   color: #e8ddcf;
-  font-size: 80px;
+  font-size: 75px;
   text-align: center;
-  top: 52vh;
+  top: 50vh;
   left: 98vh;
+}
+#about-hirono p {
+  position: relative;
+  color: #e8ddcf;
+  font-size: 23px;
+  max-width: 600px;
 }
 .hirono-text-container {
   display: flex;
@@ -127,18 +134,18 @@ h3 {
   position: relative; 
   text-align: justify;
   top: -280px;
-  margin-left: 520px;
+  margin-left: 490px;
 }
 .hirono-description.left {
   align-self: flex-start;
-  margin-left: 550px;
-  max-width: 700px;
+  margin-left: 450px;
+  margin-top: 30px;
 }
 .hirono-description.right {
   align-self: flex-end;
   margin-top: 43px;
-  margin-right: 536px;
-  max-width: 545px;
+  margin-right: 383px;
+  max-width: 480px;
 }
 .hirono-description p {
   color: #F5E6D3;
@@ -151,7 +158,7 @@ h3 {
   font-size: 28px;
   text-align: justify; 
   max-width: 700px;
-  top: -12vh;
+  margin-top: -17vh;
   left: 100vh;
 }
 p.name {
@@ -165,8 +172,8 @@ p.name {
 .hirono-ghost{
   position: relative;
   width: 20%;
-  top: -400px;
-  margin-left: 19vh;
+  top: -397px;
+  margin-left: 15vh;
 }
 .hirono-star{
   position: relative;
@@ -211,19 +218,19 @@ p.name {
   width: 17%;
   position: absolute;
   width: 21%;
-  top: 192vh;
+  top: 194vh;
   right: 80vh;
 }
 .kite-hirono{
   position: absolute;
   width: 21%;
-  top: 192vh;
+  top: 194vh;
   right: 50vh;
 }
 .all-figures{
   position: absolute;
   width: 25%;
-  top: 199vh;
+  top: 197vh;
   right: 123vh;
   border: 1.5px solid #e8ddcf;
 }
@@ -241,12 +248,12 @@ p.name {
   color: #3c3429;
   font-size: 150px;
   text-align: center;
-  top: -4.5vh;
+  top: -7vh;
 }
 #hirono-series{
   position: relative;
   background-color: #e8ddcf;
-  height: 130vh;
+  height: 125vh;
   padding-top: 10vh;
   padding-left: 8vh;
   padding-right: 8vh;
@@ -255,7 +262,7 @@ p.name {
 .hirono-other{
   position: absolute;
   width: 20%;
-  top: 35vh;
+  top: 37vh;
   left: 17vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -267,7 +274,7 @@ p.name {
 .hirono-mishief{
   position: absolute;
   width: 20%;
-  top: 35vh;
+  top: 37vh;
   left: 62vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -279,7 +286,7 @@ p.name {
 .hirono-city{
   position: absolute;
   width: 20%;
-  top: 35vh;
+  top: 37vh;
   left: 107vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -291,7 +298,7 @@ p.name {
 .hirono-mime{
   position: absolute;
   width: 20%;
-  top: 35vh;
+  top: 37vh;
   left: 152vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -303,7 +310,7 @@ p.name {
 .hirono-reshape{
   position: absolute;
   width: 20%;
-  top: 80vh;
+  top: 82vh;
   left: 17vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -315,7 +322,7 @@ p.name {
 .hirono-shelter{
   position: absolute;
   width: 20%;
-  top: 80vh;
+  top: 82vh;
   left: 62vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -327,7 +334,7 @@ p.name {
 .hirono-petit{
   position: absolute;
   width: 20%;
-  top: 80vh;
+  top: 82vh;
   left: 107vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -339,7 +346,7 @@ p.name {
 .hirono-echo{
   position: absolute;
   width: 20%;
-  top: 80vh;
+  top: 82vh;
   left: 152vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -352,30 +359,30 @@ p.name {
 #ending {
   position: relative;
   background-color: #3c3429;
-  height: 70vh;
+  height: 60vh;
   top: 0;
 }
 .hirono-birdy{
   position: absolute;
   width: 18%;
-  top: 6vh;
+  top: 3vh;
   left: 87vh;
 }
 #ending h2{
   position: relative;
   color: #e8ddcf;
-  font-size: 32px;
+  font-size: 25px;
   text-align: center;
   max-width: 115vh;
   margin-left: 48vh;
   margin-bottom: 2vh;
-  top: 40vh;
+  top: 36vh;
 }
 h2.gaegu-regular a {
   color: #e8ddcf;
-  font-size: 32px;
+  font-size: 25px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 95px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
