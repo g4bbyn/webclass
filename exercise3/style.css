@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.container {
+  position: relative;
+  width: 100%; 
+}
+.container img {
+    width: 100%;
+    height: 682.2px;
+    display: block;
+    background-size: cover;
+}
+.lyrics {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #222;
+    display: block;
+}
+.hint {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color:rgb(64, 64, 64);
+    bottom: 24px;
+    left: 610px;
+}
+.l1 { 
+    font-size: 40px;
+    padding-left: 0px;
+    position: absolute;
+    top: 165px;
+    left: 411px;
+}
+.l2 {
+    font-size: 42px;
+    padding-left: 40px;
+    position: absolute;
+    top: 220px;
+    left: 655px;
+}
+.l3 {
+    font-size: 42px;
+    padding-left: 120px;
+    position: absolute;
+    top: 275px;
+    left: 720px;
+}
+.l4 {
+    font-size: 42px;
+    padding-left: 0px;
+    position: absolute;
+    top: 330px;
+    left: 520px;
+}
+.l5 { 
+    font-size: 42px;
+    padding-left: 140px;
+    position: absolute;
+    top: 385px;
+    left: 705px;
+}
+/*image animation*/
+.image-hovereffect {
+    position: absolute;
+    display: block;
+    width: 300px;  
+    height: 300px;
+    bottom: 350px;
+    left: 170px;
+    transform: rotate(-6deg);
+}
+.default, .hover {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.default {
+    display: block;
+    transition: opacity 0.5s ease;
+}
+.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.image-hovereffect:hover .hover {
+    opacity: 1;
+}
+.image-hovereffect:hover .default {
+    opacity: 0;
+}
+/*animation*/
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #222;
+    margin-left: 1px;
+    vertical-align: middle;
+    animation: blink 0.7s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

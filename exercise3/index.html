@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I'm Low On Gas And You Need A Jacket</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="images/background.png" alt="paper backround" class="background-image">
+              <div class="lyrics">
+                <span class="l1"></span>
+                <span class="l2"></span>
+                <span class="l3"></span>
+                <span class="l4"></span>
+                <span class="l5"></span>
+            </div>
+            <div class="hint">press space to begin</div>
+            <div class="image-hovereffect">
+                <img src="images/bw.png" class="default">
+                <img src="images/collide_with_the_sky.webp" class="hover">
+            </div>
+        </div>
+        <script>
+            const lines = [
+            [document.querySelector('.l1'), 'But I will soon forget'],
+            [document.querySelector('.l2'), 'the color of'],
+            [document.querySelector('.l3'), 'your eyes'],
+            [document.querySelector('.l4'), "And you'll forget"],
+            [document.querySelector('.l5'), 'mine.'],
+            ];
+        let currentLine = 0;
+        let currentChar = 0;
+        // places  cursor
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        lines[0][0].appendChild(cursor);
+        function type() {
+            const [el, text] = lines[currentLine];
+        // cursor to current line and writes text
+        el.appendChild(cursor);
+        el.textContent = text.slice(0, currentChar);
+        el.appendChild(cursor);
+        currentChar++;
+        if (currentChar > text.length) {
+            currentChar = 0;
+            currentLine++;
+            if (currentLine >= lines.length) {
+                cursor.style.opacity = '0'; // all done
+            return;
+            }
+        }
+        setTimeout(type, currentChar === 0 ? 400 : 150);
+        }
+        document.addEventListener('keydown', e => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                type();
+            }
+        });
+        </script>
+    </body>
+</html>

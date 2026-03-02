@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html, body {
     overflow-x: hidden;
@@ -9,21 +10,22 @@ html, body {
 #opener {
     background-image: url(images/background1.75.png);
     width: 100%;
-    height: 120vh;
+    height: 128vh;
     background-size: cover;
+    background-position: center;
 }
 /* lang */
 h2 {
   color: rgb(31, 16, 0);
-  font-size: 32px;
+  font-size: clamp(20px, 2.2vw, 32px);
 }
 h4 {
   color: rgb(31, 16, 0);
-  font-size: 30px;
+  font-size: clamp(18px, 2vw, 30px);
 }
 h3 {
   color: rgb(31, 16, 0);
-  font-size: 20px;
+  font-size: clamp(14px, 1.4vw, 20px);
 }
 #about-lang {
   width: 100%;
@@ -35,17 +37,16 @@ h3 {
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-  max-width: 500vh;  
+  max-width: 100%;
   width: 100%;
-  height: 86vh;
-  padding: 50px;
-  padding-bottom: 8vh;
+  height: 10%;
+  padding: 1%;
+  padding-bottom: 20%;
 }
 .image-overlay {
   position: absolute;
-  justify-content: center; 
-  top: 27vh;
-  left: 15vh;
+  top: 15%;
+  left: 8%;
   width: 30%; 
   height: auto;
   z-index: 2; 
@@ -64,11 +65,9 @@ h3 {
 }
 .image-overlay2 {
   position: absolute;
-  justify-content: center;
   display: block;
-  margin-top: 8vh;
-  margin-left: 72vh;
-  margin-right: auto;
+  top: 70%;
+  left: 38%;
   width: 20%; 
   height: auto;
   z-index: 2; 
@@ -78,160 +77,157 @@ h3 {
   transform-origin: center bottom;
 }
 .image-container h2 {
-    font-size: 45px;
+    font-size: clamp(26px, 3.1vw, 45px);
     color: #333;
-    margin-top: 33px;
-    margin-bottom: 10px;
-    margin-left: 64vh;
+    margin-top: -2vw;
+    margin-bottom: 0.7vw;
+    margin-left: 40%;
     text-align: center;
 }
 .image-container h4 {
-    font-size: 23px;
-    justify-content: center;
-    align-items: center;
+    font-size: clamp(15px, 1.6vw, 23px);
     color: #555;
     line-height: 1.2;
-    max-width: 695px; 
+    max-width: 48%; 
     margin-top: 4vh; 
-    margin-left: 90vh;     
+    margin-left: 47%;     
 }
 /* about hirono */
 #about-hirono{
   position: relative;
   background-color: #3c3429;
   overflow: hidden;
-  height: 246vh;
+  height: 1700px;
+  padding-bottom: 0%;
 }
 #about-hirono h1 {
   color: #e8ddcf;
-  font-size: 165px;
+  font-size: clamp(50px, 11.5vw, 165px);
   text-align: center;
-  margin-top: 50vh;
+  margin-top: 15%;
   margin-bottom: 0;
-  margin-left: 5vh;
+  margin-left: 3%;
 }
 #about-hirono h2 {
-  position: absolute;
   color: #e8ddcf;
-  font-size: 75px;
+  font-size: clamp(30px, 5.2vw, 75px);
   text-align: center;
-  top: 50vh;
-  left: 98vh;
+  margin-left: 8%;
+  margin-top: -16%;
 }
 #about-hirono p {
   position: relative;
   color: #e8ddcf;
-  font-size: 23px;
-  max-width: 600px;
+  font-size: clamp(15px, 1.6vw, 23px);
+  max-width: 59%;
 }
 .hirono-text-container {
   display: flex;
   flex-direction: column;
   gap: 0; 
-  margin-top: -70px; 
+  margin-top: 10%;
+  margin-left: 0%; 
 }
 .hirono-description {
   position: relative; 
   text-align: justify;
-  top: -280px;
-  margin-left: 490px;
+  top: -11%;
+  margin-left: 30%;
 }
 .hirono-description.left {
-  align-self: flex-start;
-  margin-left: 450px;
-  margin-top: 30px;
+  align-self: baseline;
+  margin-left: 30%;
+  margin-top: 1.5%;
 }
 .hirono-description.right {
-  align-self: flex-end;
-  margin-top: 43px;
-  margin-right: 383px;
-  max-width: 480px;
+  align-self: end;
+  margin-top: 3%;
+  margin-right: 7%;
+  max-width: 53%;
 }
 .hirono-description p {
   color: #F5E6D3;
-  font-size: 28px;
+  font-size: clamp(16px, 1.95vw, 28px);
   line-height: 1.2;
 }
 .hirono-description2 {
   position: relative;
   color: #F5E6D3;
-  font-size: 28px;
+  font-size: clamp(16px, 1.95vw, 28px);
   text-align: justify; 
-  max-width: 700px;
-  margin-top: -17vh;
-  left: 100vh;
+  max-width: 60%;
+  margin-top: 9%;
+  left: 44%;
 }
 p.name {
   position: relative; 
   text-align: center;
   color: #F5E6D3;
-  font-size: 30px;
-  margin-left: 95vh;
+  font-size: clamp(18px, 2.1vw, 30px);
+  margin-left: 66%;
   margin-top: -2px;
 }
 .hirono-ghost{
-  position: relative;
+  position: absolute;
   width: 20%;
-  top: -397px;
-  margin-left: 15vh;
+  top: 11%;
+  margin-left: 9%;
 }
 .hirono-star{
-  position: relative;
-  top: -500px;
-  left: 76vh;
+  position: absolute;
+  top: 1%;
+  left: 63%;
   width: 25%;
 }
 .hirono-sleeping{
   position: absolute;
   width: 20%;
-  top: 136vh;
-  transform: translateX(335%);
+  top: 47%;
+  left: 67%;
 }
 .hirono-white{
   position: absolute;
   width: 18%;
-  top: 90vh;
-  transform: translateX(34%);
+  top: 30%;
+  left: 6%;
   border: 1.5px solid #e8ddcf;
 }
 .hirono-mushroom{
   position: absolute;
   width: 24%;
-  top: 131vh;
-  right: 118vh;
+  top: 46%;
+  left: 19%;
 }
 .hirono-bear{
   position: absolute;
   width: 18%;
-  top:  76vh;
-  transform: translateX(420%);
+  top: 29%;
+  left: 77%;
   border: 1.5px solid #e8ddcf;
 }
 .hirono-box{
-  width: 20%;
   position: absolute;
   width: 24%;
-  top: 130vh;
-  right: 146vh;
+  top: 46%;
+  left: 7%;
 }
 .hirono-stitch{
-  width: 17%;
   position: absolute;
   width: 21%;
-  top: 194vh;
-  right: 80vh;
+  top: 71.8%;
+  right: 37%;
 }
 .kite-hirono{
   position: absolute;
   width: 21%;
-  top: 194vh;
-  right: 50vh;
+  top: 71.8%;
+  right: 25%;
 }
 .all-figures{
   position: absolute;
   width: 25%;
-  top: 197vh;
-  right: 123vh;
+  top: 73%;
+  right: 57%;
   border: 1.5px solid #e8ddcf;
 }
 .shake-image2:hover {
@@ -246,24 +242,25 @@ p.name {
 #hirono-series h1 {
   position: relative;
   color: #3c3429;
-  font-size: 150px;
+  font-size: clamp(50px, 10.4vw, 150px);
   text-align: center;
   top: -7vh;
 }
 #hirono-series{
   position: relative;
   background-color: #e8ddcf;
-  height: 125vh;
+  height: 145vh;
   padding-top: 10vh;
-  padding-left: 8vh;
-  padding-right: 8vh;
+  padding-left: 5.5%;
+  padding-right: 5.5%;
   bottom: 0;
+  top:-30%;
 }
 .hirono-other{
   position: absolute;
   width: 20%;
-  top: 37vh;
-  left: 17vh;
+  top: 30%;
+  left: 3%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -274,8 +271,8 @@ p.name {
 .hirono-mishief{
   position: absolute;
   width: 20%;
-  top: 37vh;
-  left: 62vh;
+  top: 30%;
+  left: 26%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -286,8 +283,8 @@ p.name {
 .hirono-city{
   position: absolute;
   width: 20%;
-  top: 37vh;
-  left: 107vh;
+  top: 30%;
+  left: 52%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -298,8 +295,8 @@ p.name {
 .hirono-mime{
   position: absolute;
   width: 20%;
-  top: 37vh;
-  left: 152vh;
+  top: 30%;
+  left: 77%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -310,8 +307,8 @@ p.name {
 .hirono-reshape{
   position: absolute;
   width: 20%;
-  top: 82vh;
-  left: 17vh;
+  top: 66%;
+  left: 3%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -322,8 +319,8 @@ p.name {
 .hirono-shelter{
   position: absolute;
   width: 20%;
-  top: 82vh;
-  left: 62vh;
+  top: 66%;
+  left: 26%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -334,8 +331,8 @@ p.name {
 .hirono-petit{
   position: absolute;
   width: 20%;
-  top: 82vh;
-  left: 107vh;
+  top: 66%;
+  left: 52%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -346,8 +343,8 @@ p.name {
 .hirono-echo{
   position: absolute;
   width: 20%;
-  top: 82vh;
-  left: 152vh;
+  top: 66%;
+  left: 77%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -365,22 +362,23 @@ p.name {
 .hirono-birdy{
   position: absolute;
   width: 18%;
-  top: 3vh;
-  left: 87vh;
+  top: 3%;
+  left: 41%;
 }
 #ending h2{
   position: relative;
   color: #e8ddcf;
-  font-size: 25px;
+  font-size: clamp(15px, 1.75vw, 25px);
   text-align: center;
-  max-width: 115vh;
-  margin-left: 48vh;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2vh;
   top: 36vh;
 }
 h2.gaegu-regular a {
   color: #e8ddcf;
-  font-size: 25px;
+  font-size: clamp(15px, 1.75vw, 25px);
   text-align: center;
   margin-top: 95px;
   text-decoration: none;
@@ -400,13 +398,11 @@ h2.gaegu-regular a:hover {
   font-weight: 300;
   font-style: normal;
 }
-
 .gaegu-regular {
   font-family: "Gaegu", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .gaegu-bold {
   font-family: "Gaegu", sans-serif;
   font-weight: 700;
