@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    background-color: pink;
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15vw;
+  color: white;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 5px black;
+}
+#headline {
+    width: 80%;
+    margin: 50px auto 50px auto;
+    position: relative;
+}
+.cupcake1 {
+    background-image: url(cupcake-images/cupcake1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    animation: rotate 8s 2s infinite alternate;
+}
+@keyframes rotate {
+    0%{ 
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.cupcake2 {
+    background-image: url(cupcake-images/cupcake2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    animation: rotate 4s 1s infinite alternate-reverse;
+}
+#content {
+    width: 80%;
+    margin: 50px auto 50px auto;
+    display: flex;
+}
+.column {
+    width: 50%;
+}
+h2 {
+    font-size: 28px;
+    margin-right: 50px;
+    line-height:  1.4;
+}
+p {
+    font-size: 22px;
+    line-height:  1.5;
+}
+#bottom {
+    width: 80%;
+    margin: 50px auto 50px auto;
+    display: none;
+}
+#bottom img {
+    width: 100%;
+    height: auto;
+}
+
+/*MEDIA QUERY F0R RESPONSIVE WEBSITE*/
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: aqua;
+    }
+    .cupcake1 {
+        background-image: url(cupcake-images/cupcake1-eaten.png);
+    }
+    .cupcake2 {
+        background-image: url(cupcake-images/cupcake2-eaten.png);
+    }
+    #bottom {
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        background-color: orange;
+    }
+    h1 {
+        color: yellow;
+    }
+    #content {
+        display: block;
+    }
+    .column {
+        width: 100%;
+    }
+    h2 {
+        margin-bottom: 25px;
+    }
+    .cupcake2 {
+        z-index: -99;
+        top: 50px;
+        width: 90px;
+        height: 90px;
+    }
+}
