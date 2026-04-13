@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Tale of Princess Kaguya</title>
+            <link rel="stylesheet" href="style.css">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+             <!--Cormorant Garamond-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+            
+            <!--Klee One-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+
+            <!--Yuji-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    </head>
+    <body>  
+        <div id="entrance">
+            <img src="images/entrance.webp" alt="bamboo illustration">
+            <div id="entrance-text">
+                <p class="yuji-syuku-regular">かぐや姫の物語</p>
+            <h2 class="klee-one-regular">Press <span>Space</span> to enter</h2>
+            </div>
+        </div>  
+
+        <!--NEXT PAGE-->
+        <div id="main-content">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="jp klee-one-regular">Isao Takahata · 2013</div>
+                    <h1>The Tale of <em> Princess Kaguya</em></h1>
+                </div>
+            </div>
+
+            <div id="instruction">
+                <div class="instruction-inner klee-one-regular">
+                    <p><span class="hint"></span>Select a point to discover</p>
+                </div>
+            </div>
+
+            <!-- SVG connection lines -->
+            <div class="map-wrap" id="map">
+                <svg id="lines" xmlns="http://www.w3.org/2000/svg"></svg>
+            </div>
+
+            <!-- Info panel -->
+            <div class="panel" id="panel">
+                <div class="panel-tag" id="p-tag"></div>
+                <h2 id="p-title" class="klee-one-regular"></h2>
+                <div id="p-body"></div>
+                <div id="p-images"></div>  
+                <div class="panel-sub" id="p-sub"></div>
+                <div class="panel-links">
+                    <div id="p-chips"></div>
+                </div>  
+            </div>  
+
+        <!--star nodes-->
+        <div class="node n-kaguya" onclick="show('kaguya')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">Kaguya</div>
+        </div>
+        <div class="node n-bamboo" onclick="show('bamboo')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">Bamboo</div>
+        </div>
+        <div class="node n-moon" onclick="show('moon')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">The Moon</div>
+        </div>
+        <div class="node n-destiny"  onclick="show('destiny')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular"> Celestial Destiny</div>
+        </div>
+        <div class="node n-suitors" onclick="show('suitors')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">The Suitors</div>
+        </div>
+        <div class="node n-grief" onclick="show('grief')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">Grief</div>
+        </div>
+        <div class="node n-earth"    onclick="show('earth')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">The Earth</div>
+        </div>
+        <div class="node n-time" onclick="show('time')">
+            <div class="node-dot"></div>
+            <div class="node-label klee-one-regular">Impermanence</div>
+        </div>
+    </div>
+
+<!------SCRIPT SECTION--------->
+    <script>
+    //CONNECTION LINES
+    const data = {
+    kaguya: {
+    title: 'Kaguya-hime',
+    images: [
+        { front: 'images/kaguya1.jpg', back: 'images/kaguya2.jpg' },
+        { front: 'images/kaguya3.jpg', back: 'images/kaguya4.webp' },
+    ],
+    body: `<p class="klee-one-regular">An old bamboo cutter discovers a girl, small enough to cup in two hands, inside a glowing stalk of bamboo. He takes her as a divine gift to raise with his wife. She grows rapidly, and is nicknamed “Takenoko” (Little Bamboo) by village friends, and shares a close bond with a boy named Sutemaru. Believing the gold from the bamboo stock is a sign from the Heavens, her adoptive father moves her to the capital to raise her as a princess. There, she is forced to endure strict training, abandoning the freedom of the countryside. Kaguya attracts five high-ranking suitors, demanding impossible tasks of them to win her hand, highlighting her desire to avoid arranged marriage. It is revealed that she is a celestial being who broke the Moon's rules by desiring to experience earthly life. She is ultimately forced to return to the moon, losing all memory of her life on Earth, including her family.</p>
+    <p class="klee-one-regular">Kaguya is the film's center: a being of celestial origin who wants, above all, to be human.</p>`,
+    },
+    bamboo: {
+    title: 'Bamboo',
+    images: [
+        { front: 'images/bamboo1.jpg', back: 'images/bamboo2.jpg' },
+        { front: 'images/bamboo3.jpg', back: 'images/bamboo4.webp' },
+    ],
+    body: `<p class="klee-one-regular">Bamboo symbolizes a vessel for the divine, bringing the bamboo cutter fortune. Kaguya's rapid growth from a tiny doll-like figure into a full-grown woman parallels the fast growth of bamboo. A bamboo's hollow structure is a sign of nature's purity, representing Kaguya's honest nature, an untainted essence compared to the artificial life of the court. As a plant that does not wither in winter, it represents Kaguya's immortal nature as a heavenly being from the moon, a world without death. 
+    </p>`,
+    },
+    moon: {
+    title: 'The Moon',
+    images: [
+        { front: 'images/moon1.webp', back: 'images/moon2.webp' },
+        { front: 'images/moon3.webp', back: 'images/moon4.jpg' },
+    ],
+    body: `<p class="klee-one-regular">The Moon represents a cold, emotionless, and detached “Pure Land,” a realm free from earthly pain but also devoid of love, emotion, and the beauty of ephemeral human experiences. It contrasts Earth, symbolizing the ultimate detachment from worldly suffering and emotional bonds. The Celestial Beings live in complete purity in their home, the Moon. They appear to resemble human beings, but are fairer and more beautiful. While it is her home, Kaguya's return to the moon is portrayed as a forced return to a detached existence, as she comes to cherish the fleeting joys of life on Earth.</p>
+    <p class="klee-one-regular">The Moon is not a place of peace, but a place of erasure. Its inhabitants feel no sorrow, no joy, no hunger, no longing. They are perfect, and their perfection is a kind of death.</p>`,
+    },
+    suitors: {
+    title: 'The Five Suitors',
+    images: [
+        { front: 'images/suitors1.jpg', back: 'images/suitors2.jpg' },
+        { front: 'images/suitors3.webp', back: 'images/suitors4.webp' },
+    ],
+    body: `<p class="klee-one-regular">The five suitors' arrogance reveals how courtly culture transforms people into objects of status. Kaguya sets five impossible quests for the noblemen. Each man, in failing, reveals who he really is. They do not love Kaguya, but desire the idea of her: the prize, the conquest, the rarest object in the kingdom. By setting impossible tasks for them, Kaguya shows that her love and hand in marriage cannot be bought with wealth or social status. They serve to demonstrate Princess Kaguya's otherworldly nature, her refusal to be treated as a commodity, and to critique the superficiality of Heian-period aristocracy.</p>`,
+    },
+    destiny: {
+    title: 'Earthly Desires vs Celestial Destiny',
+    images: [
+        { front: 'images/destiny1.jpg', back: 'images/destiny2.webp' },
+        { front: 'images/destiny3.webp', back: 'images/destiny4.webp' },
+    ],
+    body: `<p class="klee-one-regular">Kaguya's time on Earth was filled with comfort and luxury, but it was clear from the beginning that she was destined for the moon. Her natural home was up there, even though she was beautiful and brought wealth. The Emperor's attempts to keep her on Earth highlight the clash between holding onto what is precious and accepting fate. Her return to the moon shows that sometimes, even if we don't want to, we must accept destiny.</p>`,
+    },
+    grief: {
+    title: 'Grief',
+    images: [
+        { front: 'images/grief1.jpg', back: 'images/grief2.webp' },
+        { front: 'images/grief3.webp', back: 'images/grief4.webp' },
+    ],
+    body: `<p class="klee-one-regular">The film's emotional architecture is built on a paradox: grief proves the value of what was lost. Every time Kaguya weeps, she is testifying to the reality of her attachment to this imperfect, mortal world.</p>
+    <p class="klee-one-regular">The suitors see Kaguya as a prize. Her father sees a destiny he's been entrusted to fulfill. Even the Emperor, who is supposed to be the most powerful man in the world, only wants to possess her. Her grief is being surrounded by people who love an idea of her, rather than her. <p class="klee-one-regular">Kaguya grieves Sutemaru not just as a lost love but as a lost life. He represents the path not taken: a simple, physical, earthly existence. Their flying dream sequence is heartbreaking because it can only exist outside reality.</p>
+    <p <p class="klee-one-regular">There is a sequence in which her despair escapes the film's visual language entirely: the ink becomes a sketch, animation crumbles into pure mark-making.</p>
+    <p class="klee-one-regular">Kaguya's ultimate grief stems from being torn between her love for earthly life and her forced return to the emotionless Moon. Her grief intensifies as she is forced into a restrictive life, losing her freedom and connection to nature. Her return to the Moon is a form of death, severing her emotional connections and love and grief that defined her humanity on Earth. She was sent to Earth specifically to feel all the things that got her in trouble on the moon, and then have them tragically taken away.</p>`,
+    },
+    earth: {
+    title: 'The Earth',
+    images: [
+        { front: 'images/earth1.jpg', back: 'images/earth2.jpg' },
+        { front: 'images/earth3.webp', back: 'images/earth4.webp' },
+    ],
+    body: `<p class="klee-one-regular">Contrasting the Moon's cold perfection, the Earth is represented not merely as a physical location, but as a vibrant, bittersweet, and deeply emotional experience.</p>
+    <p class="klee-one-regular">Through a water-colored, sketch-like animation style, the film portrays Earth as a place of raw beauty, fleeting moments, and profound sorrow, showing that the capacity to feel pain is inseparable from the joy of living. Takahata illustrates the rawness of the natural world: cherry blossoms that fall before our eyes, mud that stains our feet, and mountains that change with every season.</p> 
+    <p class="klee-one-regular">The celestial beings from the Moon view Earth as “unclean” because of its suffering and emotional attachment. However, Kaguya argues that this “impurity”—the capacity to feel joy, love, and saddness—is what makes life on Earth meaningful. When Kaguya is finally taken back to the Moon, the last thing she looks at is the Earth. She watches it shrink and sheds tears, knowing the memories of Earth's beauty and emotional weight are being taken from her</p>`,
+    },
+    time: {
+    title: 'Impermanence',
+    images: [
+        { front: 'images/impermanence1.webp', back: 'images/impermanence2.jpg' },
+        { front: 'images/impermanence3.jpg', back: 'images/impermanence4.webp' },
+    ],
+    body: `<p class="klee-one-regular">Running beneath the film like a deep current is the Japanese aesthetic concept of 物の哀れ <em>(mono no aware)</em> the bittersweet awareness that all beautiful things pass.</p> 
+    <p class="klee-one-regular">Everything the film treats as beautiful is earthly and impermanent — seasons changing, mud on bare feet, food eaten hungrily, laughter that gets out of control, love that is physical and unresolved. The film's seasons represent a stage of life: spring is childhood, summer is emergence, autumn is loss, and winter is ending. Takahata paints these moments in loose, gestural brushwork that feels alive and uncontained. The Earth is a mess, and time is passing. It is everything that can be lost, which is exactly what makes it worth having.</p>`,
+    }
+    };
+
+    const labels = {
+    kaguya:'Kaguya', bamboo:'Bamboo', moon:'The Moon',
+    suitors:'The Suitors', destiny:'Earthly Desires vs Celestial Destiny', grief:'Grief',
+    earth:'The Earth', time:'Impermanence'
+    };
+   
+    function show(id) {
+        const d = data[id];
+        if (!d) return;
+        document.getElementById('p-title').textContent = d.title;
+        document.getElementById('p-body').innerHTML    = d.body;
+
+        const container = document.getElementById('p-images');
+        container.innerHTML = '';
+        if (d.images && d.images.length) {
+            d.images.slice(0, 2).forEach(pair => {
+        const card = document.createElement('div');
+        card.className = 'img-card';
+        card.innerHTML = `
+            <img class="img-front" src="${pair.front}" alt="">
+            <img class="img-back"  src="${pair.back}"  alt="">`;
+        container.appendChild(card);
+            });
+        }
+        const panel = document.getElementById('panel');  
+            panel.classList.add('active');             
+    }
+    //SVG connection lines
+    const connections = [
+        ['kaguya','bamboo'],
+        ['kaguya','moon'],
+        ['kaguya','grief'],
+        ['kaguya','earth'],
+        ['kaguya','destiny'],
+        ['kaguya','time'],
+        ['bamboo','earth'],
+        ['bamboo','suitors'],
+        ['moon','grief'],
+        ['moon','time'],
+        ['grief','destiny'],
+        ['earth','time'],
+        ['destiny','suitors']
+    ];
+    
+    function drawLines() {
+        const map   = document.getElementById('map');
+        const svgEl = document.getElementById('lines');
+        svgEl.innerHTML = '';
+
+        const mapRect = map.getBoundingClientRect();
+
+        function getCenter(selector) {
+            const el = document.querySelector(selector);  // ← changed
+            if (!el) return null;
+            const dot = el.querySelector('.node-dot');
+            const r = dot.getBoundingClientRect();
+            return {
+                x: r.left + r.width  / 2 - mapRect.left,
+                y: r.top  + r.height / 2 - mapRect.top
+            };
+        }
+        connections.forEach(([a, b]) => {
+            const p1 = getCenter('.n-' + a);
+            const p2 = getCenter('.n-' + b);
+            if (!p1 || !p2) return;
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', p1.x);
+                line.setAttribute('y1', p1.y);
+                line.setAttribute('x2', p2.x);
+                line.setAttribute('y2', p2.y);
+                line.setAttribute('class', 'conn');
+                svgEl.appendChild(line);
+        });
+    }   
+    document.addEventListener('click', (e) => {
+        const panel = document.getElementById('panel');
+        if (!panel.classList.contains('active')) return;
+    
+        // if click is outside the panel and not on a node
+        if (!panel.contains(e.target) && !e.target.closest('.node')) {
+        panel.classList.remove('active');
+        }
+    });
+
+    //SCRIPT FOR ENTRANCE TO MAIN PAGE (AI ASSISTANCE)
+        const entrance = document.getElementById('entrance');
+        const mainContent = document.getElementById('main-content');
+        let entered = false;
+
+        function enter() {
+            if (entered) return;
+            entered = true;
+            entrance.classList.add('fade-out');
+            entrance.addEventListener('transitionend', () => {
+            entrance.style.display = 'none';
+            mainContent.classList.add('visible');
+            drawLines();
+            window.addEventListener('resize', drawLines); // ← here
+            }, { once: true });
+        }
+            // spacebar transition
+        document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+            e.preventDefault();
+            enter();
+            }
+        });
+    </script>
+    </body>
+</html>
